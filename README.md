@@ -5,13 +5,13 @@ The application has been tested on Moode audio OS, but it should also work on ot
 
 ## Test run
 1. SSH to rPI:
-``` 
+```
 ssh pi@moode.local
 ```
 
 2. Download and unzip repository content:
 ```
-wget -c "https://github.com/vcucek/ifi-tidal-moode/archive/refs/heads/master.zip" -O - | busybox unzip -
+wget -c "https://github.com/LeandroCasiraghi/ifi-tidal-moode/archive/refs/heads/master.zip" -O - | busybox unzip -
 ```
 
 3. Navigate to folder:
@@ -24,7 +24,7 @@ cd ifi-tidal-moode-master
 make
 ```
 
-4. Run Tidal connect as sudo. For some reason the application is unable to open ALSA device stream as a reguar user.
+4. Run Tidal connect as sudo. For some reason the application is unable to open ALSA device stream as a regular user.
 ```
 sudo ./start.sh
 ```
