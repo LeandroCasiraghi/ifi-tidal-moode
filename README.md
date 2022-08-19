@@ -2,16 +2,18 @@
 
 The repository includes dynamic libraries which were scraped from debian packages to facilitate the installation process.
 The application has been tested on Moode audio OS, but it should also work on other distros.
+NOTE: I removed the 'select-device' script from the execution and modified the files so that my own device is used by default.
 
-## Test run
-1. SSH to rPI:
-```
-ssh pi@moode.local
+
 ```
 
-2. Download and unzip repository content:
+1. Download and unzip repository content:
 ```
 sudo wget -c "https://github.com/LeandroCasiraghi/ifi-tidal-moode/archive/refs/heads/master.zip" -O - | busybox unzip -
+```
+2. Install libportaudio2, which is apparently needed
+```
+sudo apt-get install libportaudio2
 ```
 
 3. Navigate to folder:
@@ -19,22 +21,8 @@ sudo wget -c "https://github.com/LeandroCasiraghi/ifi-tidal-moode/archive/refs/h
 cd ifi-tidal-moode-master
 ```
 
-3. Configure playback audio device:
-```
-make
-```
-
-4. Run Tidal connect as sudo. For some reason the application is unable to open ALSA device stream as a regular user.
-```
-sudo ./start.sh
-```
-
-## Install (run application as a service)
-1. Configure playback output device:
-```
-sudo make
-```
-3. Copy repository content to the "/opt/tidal-connect" folder, configure systemd unit and start a Tidal connect service:
+4. Install (run application as a service)
+Copy repository content to the "/opt/tidal-connect" folder, configure systemd unit and start a Tidal connect service:
 ```
 sudo make install
 ```
