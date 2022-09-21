@@ -5,7 +5,7 @@ The application has been tested on Moode audio OS, but it should also work on ot
 NOTE: I removed the 'select-device' script from the execution and modified the files so that my own device is used by default.
 
 
-```
+
 
 1. Download and unzip repository content:
 ```
