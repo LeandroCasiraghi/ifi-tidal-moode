@@ -9,7 +9,7 @@ NOTE: I removed the 'select-device' script from the execution and modified the f
 
 1. Download and unzip repository content:
 ```
-sudo wget -c "https://github.com/LeandroCasiraghi/ifi-tidal-moode/archive/refs/heads/master.zip" -O - | busybox unzip -
+sudo wget -c "https://github.com/JanuszBIznesu1/ifi-tidal-moode/archive/refs/heads/master.zip" -O - | busybox unzip -
 ```
 2. Install libportaudio2, which is apparently needed
 ```
