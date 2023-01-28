@@ -11,5 +11,5 @@ export LD_LIBRARY_PATH=$PWD/lib
 	--disable-app-security false \
 	--disable-web-security false \
 	--enable-mqa-passthrough true \
-	--playback-device "DigiHug USB Audio: - (hw:2,0)" \
+	--playback-device "iFi (by AMR) HD USB Audio: - (hw:2,0)" \
 	--log-level 1
